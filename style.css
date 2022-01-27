@@ -146,11 +146,13 @@
 		
 		}
 		.img2 img {
-
+			margin-top:60%;
 			margin-left:auto;
 			margin-right:auto;
-		   width: 100%;
-			height: 100%;
+			width: 95%;
+
+
+
 		   display: block;
 		
 		}
