@@ -1,0 +1,150 @@
+<style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            background: url(./images/background.png) no-repeat;
+            background-size: cover;
+        }
+        
+        .lamps {
+            position: absolute;
+            left: 60px;
+            /* transform: translateX(-50%); */
+            top: 170px;
+        }
+        
+        .lamps_1 {
+            left: 440px;
+        }
+        
+        .box {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 577px;
+            width: 600px;
+            background: url(./images/bk.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .lamp {
+            width: 100px;
+            min-height: 100px;
+            position: relative;
+            /* border: 1px solid black; */
+            margin-top: 30px;
+            transform-origin: top;
+            animation: move 5s 1s infinite;
+        }
+        
+        .lamp .lamp_1 {
+            height: 100px;
+            width: 50px;
+            background-color: rgb(253, 253, 36);
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 2px 0px 5px rgb(68, 55, 55), 0px 0px 10px wheat inset;
+        }
+        
+        .lamp .lamp_2 {
+            width: 100px;
+            height: 75px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50px;
+            background-color: red;
+            box-shadow: 0px 0px 50px red, 0px 0px 10px wheat inset;
+            overflow: hidden;
+        }
+        
+        .lamps .lamp_3 {
+            height: 100px;
+            width: 2px;
+            background-color: black;
+            opacity: .7;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+        
+        .lamp .border_1,
+        .lamp .border_2 {
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid black;
+            opacity: .5;
+            border-radius: 50%;
+        }
+        
+        .lamp .lamp_2 span {
+            display: block;
+            font-size: 40px;
+            line-height: 75px;
+            text-align: center;
+        }
+        
+        .lamp .border_2 {
+            width: 50px;
+        }
+        
+        .content {
+            width: 400px;
+            height: 100px;
+            border: 10px solid red;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px black, 0px 0px 5px black inset;
+            background-color: salmon;
+            font-size: 75px;
+            line-height: 100px;
+            text-align: center;
+            margin: 50px auto;
+        }
+        
+        button {
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
+            border: 2px solid red;
+            border-radius: 5px;
+            background-color: salmon;
+            cursor: pointer;
+            opacity: .7;
+            box-shadow: 0px 0px 10px black;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @keyframes move {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(10deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+            75% {
+                transform: rotate(-10deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>

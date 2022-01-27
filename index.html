@@ -1,0 +1,84 @@
+<link rel="stylesheet" type="text/css" href="style.css">  
+
+<div class="box">
+        <!-- 灯笼1 -->
+        <div class="lamps">
+            <!-- 线 -->
+            <div class="lamp_3">
+            </div>
+
+            <div class="lamp">
+                <!-- 主体 金色矩形框-->
+                <div class="lamp_1">
+                </div>
+                <!-- 红色椭圆 -->
+                <div class="lamp_2">
+                    <!-- 灯笼里的线 -->
+                    <div class="border_1"></div>
+                    <div class="border_2"></div>
+                    <span>福</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- 灯笼2 -->
+        <div class="lamps lamps_1">
+            <!-- 线 -->
+            <div class="lamp_3">
+            </div>
+
+            <div class="lamp">
+                <!-- 主体 金色矩形框-->
+                <div class="lamp_1">
+                </div>
+                <!-- 红色椭圆 -->
+                <div class="lamp_2">
+                    <!-- 灯笼里的线 -->
+                    <div class="border_1"></div>
+                    <div class="border_2"></div>
+                    <span>虎</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 祝福语框 -->
+        <div class="content">
+
+        </div>
+        <button>点击抽取祝福语</button>
+    </div>
+    <script>
+        let oBtn = document.querySelector('button');
+        let oCont = document.querySelector('.content');
+
+        let flag = false;
+        let arr = ["虎虎生威", "虎年大吉", "万事如意", "心想事成", "生龙活虎", "福虎生旺", "虎气十足", "虎兆丰年", "金虎送喜"];
+        oCont.innerHTML = arr[0];
+        let num = 0;
+
+        //定时器让祝福语随机
+        set();
+
+        function set() {
+            t = setInterval(function() {
+                if (num >= arr.length - 1) {
+                    num = 0;
+                } else {
+                    num++;
+                }
+                console.log(num);
+                oCont.innerHTML = arr[num];
+            }, 100)
+        }
+
+        oBtn.onclick = function() {
+            flag = !flag;
+            oBtn.style = "box-shadow: 0px 0px 10px black, 0px 0px 5px black inset"
+            clearInterval(t);
+            if (!flag) {
+                oBtn.style = "box-shadow: 0px 0px 10px blackt";
+                set();
+            }
+        }
+    </script>
